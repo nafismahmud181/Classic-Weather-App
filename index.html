@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <!-- Weather Card -->
+    <div class="card">
+        <div class="searchCard">
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="City Name...">
+                <button>
+                    <img src="images/search.png" alt="">
+                </button>
+            </div>
+            <p class="error"></p>
+        </div>
+        
+        <div class="weather loading">
+            <div class="grid">
+                <h2 class="city">Dhaka</h2>
+                <div class="flex">
+                    <div class="description">Cloudy</div>
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                </div>
+            </div>
+            
+            <h1 class="temp">25.02 °C</h1>
+            <div class="bottom">
+                <div class="humidity">Humidity: 91%</div>
+                <div class="wind">Wind speed: 3.05 km/h</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
