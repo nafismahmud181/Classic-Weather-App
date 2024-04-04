@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(`${apiUrl}${city}&appid=${apikey}`);
         var data = await response.json();
 
-        console.log(data); // This should now work without errors
-
         // Check if the API response contains an error
         if (data.cod !== 404) {
             // If there's an error, update the .card's box-shadow to red
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector(".error").style.display = "block";
         } if(data.cod = 200) {
             // If there's no error, proceed with updating the weather information
-            console.log("nafis");
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + " °C";
             document.querySelector(".icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
